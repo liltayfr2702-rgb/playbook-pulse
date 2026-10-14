@@ -19,17 +19,20 @@
 </div><div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
 const games=[
-{id:'g1',sport:'NFL',league:'NFL • WEEKLY MATCHUP',status:'live',home:'Harbor Hawks',away:'Metro Wolves',hs:21,as:17,detail:'3rd Quarter • 08:42',note:'Sample score • fictional matchup'},
-{id:'g2',sport:'NFL',league:'NFL • WEEKLY MATCHUP',status:'upcoming',home:'Bay City Captains',away:'Summit Foxes',hs:null,as:null,detail:'Today • 8:15 PM ET',note:'Kickoff time is fictional'},
-{id:'g3',sport:'NBA',league:'NBA • REGULAR SEASON',status:'live',home:'Austin Comets',away:'Brooklyn Towers',hs:84,as:79,detail:'4th Quarter • 06:11',note:'Sample score • fictional matchup'},
-{id:'g4',sport:'NBA',league:'NBA • REGULAR SEASON',status:'upcoming',home:'Seattle Peaks',away:'Miami Waves',hs:null,as:null,detail:'Today • 9:00 PM ET',note:'Start time is fictional'},
-{id:'g5',sport:'WNBA',league:'WNBA • REGULAR SEASON',status:'final',home:'Portland Sparks',away:'Capital Stars',hs:88,as:82,detail:'Final',note:'Sample result • fictional matchup'},
-{id:'g6',sport:'MLB',league:'MLB • REGULAR SEASON',status:'live',home:'Desert Owls',away:'Lakeview Bears',hs:4,as:3,detail:'Top 7th • 1 out',note:'Sample score • fictional matchup'},
-{id:'g7',sport:'NHL',league:'NHL • REGULAR SEASON',status:'upcoming',home:'Northport Ice',away:'Redwood Storm',hs:null,as:null,detail:'Today • 7:30 PM ET',note:'Start time is fictional'},
-{id:'g8',sport:'Soccer',league:'SOCCER • LEAGUE MATCH',status:'live',home:'Rivergate FC',away:'Old Town United',hs:1,as:1,detail:'67′',note:'Sample score • fictional matchup'},
-{id:'g9',sport:'NCAAF',league:'COLLEGE FOOTBALL',status:'final',home:'Westbridge',away:'Central Valley',hs:31,as:24,detail:'Final',note:'Sample result • fictional matchup'},
-{id:'g10',sport:'NCAAB',league:'COLLEGE BASKETBALL',status:'upcoming',home:'North State',away:'Coastal Tech',hs:null,as:null,detail:'Tomorrow • 6:00 PM ET',note:'Start time is fictional'},
-{id:'g11',sport:'Tennis',league:'TENNIS • SINGLES',status:'upcoming',home:'Jordan Vale',away:'Alex Morganfield',hs:null,as:null,detail:'Sample match • time TBD',note:'Fictional players and matchup'}
+
+const games=[
+{id:'g1',sport:'NFL',league:'NFL • WEEKLY MATCHUP',status:'upcoming',home:'Kansas City Chiefs',away:'Philadelphia Eagles',hs:null,as:null,detail:'Schedule pending verification',note:'Real teams • matchup and time unverified'},
+{id:'g2',sport:'NFL',league:'NFL • WEEKLY MATCHUP',status:'upcoming',home:'Buffalo Bills',away:'Baltimore Ravens',hs:null,as:null,detail:'Schedule pending verification',note:'Real teams • matchup and time unverified'},
+{id:'g3',sport:'NFL',league:'NFL • WEEKLY MATCHUP',status:'upcoming',home:'Dallas Cowboys',away:'San Francisco 49ers',hs:null,as:null,detail:'Schedule pending verification',note:'Real teams • matchup and time unverified'},
+{id:'g4',sport:'NFL',league:'NFL • WEEKLY MATCHUP',status:'upcoming',home:'Detroit Lions',away:'Green Bay Packers',hs:null,as:null,detail:'Schedule pending verification',note:'Real teams • matchup and time unverified'},
+{id:'g5',sport:'NFL',league:'NFL • WEEKLY MATCHUP',status:'upcoming',home:'Philadelphia Eagles',away:'Dallas Cowboys',hs:null,as:null,detail:'Schedule pending verification',note:'Real teams • matchup and time unverified'},
+{id:'g6',sport:'NFL',league:'NFL • WEEKLY MATCHUP',status:'upcoming',home:'Cincinnati Bengals',away:'Pittsburgh Steelers',hs:null,as:null,detail:'Schedule pending verification',note:'Real teams • matchup and time unverified'},
+{id:'g7',sport:'NFL',league:'NFL • WEEKLY MATCHUP',status:'upcoming',home:'Chicago Bears',away:'Minnesota Vikings',hs:null,as:null,detail:'Schedule pending verification',note:'Real teams • matchup and time unverified'},
+{id:'g8',sport:'NFL',league:'NFL • WEEKLY MATCHUP',status:'upcoming',home:'Miami Dolphins',away:'New York Jets',hs:null,as:null,detail:'Schedule pending verification',note:'Real teams • matchup and time unverified'},
+{id:'g9',sport:'NFL',league:'NFL • WEEKLY MATCHUP',status:'upcoming',home:'Atlanta Falcons',away:'Tampa Bay Buccaneers',hs:null,as:null,detail:'Schedule pending verification',note:'Real teams • matchup and time unverified'},
+{id:'g10',sport:'NFL',league:'NFL • WEEKLY MATCHUP',status:'upcoming',home:'Houston Texans',away:'Indianapolis Colts',hs:null,as:null,detail:'Schedule pending verification',note:'Real teams • matchup and time unverified'}
+];
+
 ];
 const feedItems=[{tag:'INJURY WATCH • SAMPLE',title:'Availability report pending',body:'In a live version, this card will link to a verified team or league report.',time:'Demo item • no real player status'},{tag:'LINE WATCH • SAMPLE',title:'Market movement needs context',body:'A line change can reflect news, trading, or market balancing; it is not proof of a guaranteed edge.',time:'Demo explainer'},{tag:'COMMUNITY • SAMPLE',title:'Source before signal',body:'Community posts will be labeled as opinion unless backed by a reliable source.',time:'Demo guideline'}];
 let selectedSport='All',favorites=new Set(JSON.parse(localStorage.getItem('playbookpulse-favs')||'[]')),onlyFavorites=false;
